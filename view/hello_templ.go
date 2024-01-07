@@ -41,7 +41,7 @@ func Hello(name string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</script><link href=\"static/css/output.css\" rel=\"stylesheet\"></head><body class=\"bg-gray-800\"><div class=\"container mx-auto py-8 max-w-md\"><div class=\"text-center border border-cyan-500 bg-gray-700 p-2 rounded-lg mb-5\"><h1><div class=\"text-clifford text-2xl font-mono font-bold my-5 \">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</script><link href=\"static/css/output.css\" rel=\"stylesheet\"></head><body class=\"bg-gray-800\"><div class=\"container mx-auto py-8 max-w-md\"><div class=\"text-center border border-cyan-500 bg-gray-700 p-2 rounded-lg mb-5\"><h1><div class=\"text-clifford text-2xl font-sans font-bold my-2 \">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -52,6 +52,11 @@ func Hello(name string) templ.Component {
 		}
 		var templ_7745c5c3_Var5 string = name
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Var6 := `!`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var6)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

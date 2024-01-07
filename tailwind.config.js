@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./view/**/*.{html,js,templ}",
-    "./static/**/*.{html,js}"],
+    "./static/**/*.{html,js}",
+    "./static/css/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
         clifford: '#67e8f9',
         border: '#06b6d4',
+      },
+      fontFamily: {
+        'sans': ['Quicksand'],
       }
     }
   },
