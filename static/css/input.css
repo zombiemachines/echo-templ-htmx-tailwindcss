@@ -20,6 +20,62 @@ If you want to use specific font files directly, you can do that as well:*/
     src: url('https://fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-wg.woff2') format('woff2');
 }
 
+
 /* body {
     font-family: 'Quicksand', sans-serif;
 } */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        /* //added */
+        transform: scaleX(0);
+    }
+
+    /* //added */
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fade-out {
+
+    /* //added */
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        opacity: 0;
+        /* //added */
+        transform: scaleX(0);
+    }
+}
+
+@keyframes slide-from-right {
+    from {
+        transform: translateX(490px);
+    }
+}
+
+@keyframes slide-to-left {
+    to {
+        transform: translateX(-490px);
+    }
+}
+
+/* define animations for the old and new content */
+::view-transition-old(slide-it) {
+    animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+        600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(slide-it) {
+    animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+        600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* tie the view transition to a given CSS class */
+.sample-transition {
+    view-transition-name: slide-it;
+}

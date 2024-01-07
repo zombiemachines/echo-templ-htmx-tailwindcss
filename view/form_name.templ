@@ -1,0 +1,24 @@
+
+
+package view
+
+templ FormHello() {
+	<form hx-post="/hello" hx-target="this" hx-swap="outerHTML transition:true" class="sample-transition mr-8">
+		<div class="mb-4">
+			<h1 class="text-teal-500 text-4xl font-bold">Enter your name</h1>
+			<p class="text-sm text-gray-500">in this field.</p>
+		</div>
+		<div class="mb-4">
+			<input
+ 				type="text"
+ 				name="name"
+ 				placeholder="Name"
+ 				data-form-field="name"
+ 				class="w-full py-2 px-4 border rounded-md cursor-pointer"
+			/>
+		</div>
+		<div class="text-center text-teal-200 bg-cyan-950 border border-gray-500 rounded-md mx-20 p-2 hover:bg-sky-700 ">
+			<button type="submit" class="btn btn-cyan  w-full">Submit</button>
+		</div>
+	</form>
+}

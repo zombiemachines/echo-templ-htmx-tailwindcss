@@ -13,13 +13,18 @@ templ Hello(name string) {
 			// <script> tailwind.config = {}</script>
 		</head>
 		<body class="bg-gray-800">
-			<div class="container mx-auto py-8 max-w-md">
-				<div class="text-center border border-cyan-500 bg-gray-700 p-2 rounded-lg mb-5">
-					<h1>
-						<div class="text-clifford text-2xl font-sans font-bold my-2 ">Hello { name }!</div>
-					</h1>
+			<section class="form3 h-screen bg-cover bg-center flex items-center justify-center">
+				<div class="container mx-2">
+					<div class="lg:flex">
+						<div class="lg:w-7/12  shrink mx-2 my-2 lg:pl-8 ">
+							<img class="w-full h-full object-cover rounded-md" src="static/img/features6.jpg"/>
+						</div>
+						<div class="lg:w-5/6 lg:pl-8 max-w-md flex-1">
+							@FormHello()
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
 		</body>
 	</html>
 }

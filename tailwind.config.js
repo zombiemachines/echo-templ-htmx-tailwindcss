@@ -11,6 +11,12 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Quicksand'],
+      },
+      dropShadow: {
+        '2xl': '0 8px 8px rgba(255, 255, 255, 0.10)',
+        '3xl': [
+          '0 15px 15px rgba(255, 255, 255, 0.10)'
+        ]
       }
     }
   },

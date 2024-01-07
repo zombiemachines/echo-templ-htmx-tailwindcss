@@ -10,7 +10,7 @@ import "context"
 import "io"
 import "bytes"
 
-func Hello(name string) templ.Component {
+func Card(name string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -23,33 +23,34 @@ func Hello(name string) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<html><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"cardEntrada-2\" class=\"sample-transition p-4 text-center shadow-lg m-5 mr-8 rounded-5 bg-gradient-to-r from-pink-500 via-indigo-500 to-purple-500 width-280 rounded-md drop-shadow-2xl  hover:drop-shadow-3xl\"><div class=\"cursor-pointer w-72 transition-all duration-300 transform hover:w-full\"><a hx-get=\"/form\" hx-target=\"#cardEntrada-2\" hx-swap=\"outerHTML transition:true\"><img src=\"static/img/icons8_cancel_3.svg\" style=\"width: 8%;\" alt=\"Close Icon\"></a></div><img class=\"pt-2 w-1/2 mx-auto\" src=\"static/img/icons8_male_user.svg\" alt=\"User Icon\"><h3 class=\"text-white text-center pt-2\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var2 := `Welcome`
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var2)
+		var templ_7745c5c3_Var2 string = name
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><script src=\"static/js/htmx-1.9.10.min.js\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3><p class=\"fw-bold pt-1 text-white\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var3 := ``
+		templ_7745c5c3_Var3 := `••••`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var3)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</script><link href=\"static/css/output.css\" rel=\"stylesheet\"></head><body class=\"bg-gray-800\"><section class=\"form3 h-screen bg-cover bg-center flex items-center justify-center\"><div class=\"container mx-2\"><div class=\"lg:flex\"><div class=\"lg:w-7/12  shrink mx-2 my-2 lg:pl-8 \"><img class=\"w-full h-full object-cover rounded-md\" src=\"static/img/features6.jpg\"></div><div class=\"lg:w-5/6 lg:pl-8 max-w-md flex-1\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p class=\"fw-light text-white\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = FormHello().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Var4 := `死神はりんごしか食べない`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var4)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div></div></section></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><hr class=\"text-white w-4/6  mx-auto \"></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
