@@ -9,7 +9,7 @@ import (
 	"time"
 
 	//
-	"github.com/zombiemachines/echo-templ-htmx-tailwindcss/view"
+	"github.com/zombiemachines/echo-templ-htmx-tailwindcss/controllers"
 	//
 
 	"github.com/labstack/echo/v4"
@@ -22,44 +22,23 @@ func main() {
 
 	e := echo.New()
 	e.Logger.SetLevel(echoLog.INFO)
+
 	e.Static("/static", "static")
-	e.GET("/", func(c echo.Context) error {
 
-		context := c.Request().Context()
-		writer := c.Response().Writer
+	e.GET("/", controllers.HomeHandler)
 
-		return view.Hello("Lyoko").Render(context, writer)
+	e.POST("/hello", controllers.HelloPostHandler)
 
-	})
-
-	e.POST("/hello", func(c echo.Context) error {
-
-		context := c.Request().Context()
-		writer := c.Response().Writer
-
-		name := c.FormValue("name")
-
-		return view.Card(name).Render(context, writer)
-
-	})
-
-	e.GET("/form", func(c echo.Context) error {
-
-		context := c.Request().Context()
-		writer := c.Response().Writer
-
-		return view.FormHello().Render(context, writer)
-
-	})
-
-	go func() {
-
-		if err := e.StartTLS(":"+*port, "tls/cert.pem", "tls/key.pem"); err != nil && err != http.ErrServerClosed {
-			e.Logger.Fatal("•• Shutting down server ◤•_•_•〓〓")
-		}
-	}()
+	e.GET("/form", controllers.FormHandler)
 
 	{
+		go func() {
+
+			if err := e.StartTLS(":"+*port, "tls/cert.pem", "tls/key.pem"); err != nil && err != http.ErrServerClosed {
+				e.Logger.Fatal("•• Shutting down server ◤•_•_•〓〓")
+			}
+		}()
+
 		e.Logger.Infof("〓〓•_•_•◥ ••• Server Listening on https://localhost:" + *port)
 		quit := make(chan os.Signal, 1)
 		signal.Notify(quit, os.Interrupt)
