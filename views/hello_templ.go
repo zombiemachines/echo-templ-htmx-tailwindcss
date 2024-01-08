@@ -46,16 +46,7 @@ func Hello(name string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</script><script src=\"https://cdn.tailwindcss.com\">")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Var5 := ``
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var5)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</script></head><body class=\"bg-gray-800\"><section class=\"form3 h-screen bg-cover bg-center flex items-center justify-center\"><div class=\"container mx-2\"><div class=\"lg:flex\"><div class=\"lg:w-7/12  shrink mx-2 my-2 lg:pl-8 \"><img class=\"w-full h-full object-cover rounded-md\" src=\"/static/img/features6.jpg\" alt=\"picture of a gecko\"></div><div class=\"lg:w-5/6 lg:pl-8 max-w-md flex-1\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</script></head><body class=\"bg-gray-800\"><section class=\"h-screen bg-cover bg-center flex items-center justify-center\"><div class=\"container mx-2\"><div class=\"lg:flex\"><div class=\"lg:w-7/12  shrink mx-2 my-2 lg:pl-8 \"><img class=\"w-full h-full object-cover rounded-md\" src=\"/static/img/features6.jpg\" alt=\"picture of a gecko\"></div><div class=\"lg:w-5/6 lg:pl-8 max-w-md flex-1\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

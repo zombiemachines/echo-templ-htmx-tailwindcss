@@ -1,5 +1,8 @@
 @tailwind base;
+/* @import "tailwindcss/base"; */
+/* @import "tailwindcss/components"; */
 @tailwind components;
+/* @import "tailwindcss/utilities"; */
 @tailwind utilities;
 
 /*When you import fonts from Google Fonts, it's important to use the correct URL for the font files. The URL you provided (https://fonts.googleapis.com/css?family=Quicksand&display=swap) is actually a stylesheet that includes @font-face declarations and references to the font files.

@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // mode: 'production',
   content: [
-    "./view/**/*.{html,js,templ}",
-    "./static/**/*.{html,js,css}"],
+    "./views/**/*.{html,js,templ,go,css}",
+    "./static/**/*.{html,js,templ,go,css}",
+    "./static/css/**/*.{html,js,css,templ,go}"],
   theme: {
     extend: {
       colors: {
@@ -11,7 +11,7 @@ module.exports = {
         border: '#06b6d4',
       },
       fontFamily: {
-        'sans': ['Quicksand'],
+        'sans': ["Quicksand"],
       },
       dropShadow: {
         '2xl': '0 8px 8px rgba(255, 255, 255, 0.10)',
@@ -21,6 +21,7 @@ module.exports = {
       },
     }
   },
-  plugins: [],
+  // plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 }
+
 
