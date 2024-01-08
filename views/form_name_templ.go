@@ -41,7 +41,7 @@ func FormHello() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><div class=\"mb-4\"><input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"name\" class=\"w-full py-2 px-4 border rounded-md cursor-pointer\"></div><div class=\"text-center text-teal-200 bg-cyan-950 border border-gray-500 rounded-md mx-20 p-2 hover:bg-sky-700 \"><button type=\"submit\" class=\"btn btn-cyan  w-full\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><div class=\"mb-4\"><input type=\"text\" name=\"name\" placeholder=\"Name\" class=\"w-full py-2 px-4 border rounded-md cursor-pointer\"></div><div class=\"text-center text-teal-200 bg-cyan-950 border border-gray-500 rounded-md mx-20 p-2 hover:bg-sky-700 \"><button type=\"submit\" class=\"btn btn-cyan  w-full\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

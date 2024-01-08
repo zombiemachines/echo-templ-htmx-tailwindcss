@@ -26,9 +26,7 @@ func main() {
 	e.Static("/static", "static")
 
 	e.GET("/", controllers.HomeHandler)
-
 	e.POST("/hello", controllers.HelloPostHandler)
-
 	e.GET("/form", controllers.FormHandler)
 
 	{

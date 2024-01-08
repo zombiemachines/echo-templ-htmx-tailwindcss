@@ -23,7 +23,7 @@ func Card(name string) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"cardEntrada-2\" class=\"sample-transition p-4 text-center shadow-lg m-5 mr-8 rounded-5 bg-gradient-to-r from-pink-500 via-indigo-500 to-purple-500 width-280 rounded-md drop-shadow-2xl  hover:drop-shadow-3xl\"><div class=\"cursor-pointer w-72 transition-all duration-300 transform hover:w-full\"><a hx-get=\"/form\" hx-target=\"#cardEntrada-2\" hx-swap=\"outerHTML transition:true\"><img src=\"static/img/icons8_cancel_3.svg\" style=\"width: 8%;\" alt=\"Close Icon\"></a></div><img class=\"pt-2 w-1/2 mx-auto\" src=\"static/img/icons8_male_user.svg\" alt=\"User Icon\"><h3 class=\"text-white text-center pt-2\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"cardEntrada-2\" class=\"sample-transition p-4 text-center shadow-lg m-5 mr-8 rounded-5 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 width-280 rounded-md drop-shadow-2xl  hover:drop-shadow-3xl\"><div class=\"cursor-pointer w-72 transition-all duration-300 transform hover:w-full\"><a hx-get=\"/form\" hx-target=\"#cardEntrada-2\" hx-swap=\"outerHTML transition:true\"><img src=\"/static/img/icons8_cancel_3.svg\" style=\"width: 8%;\" alt=\"Close Icon\"></a></div><img class=\"pt-2 w-1/2 mx-auto\" src=\"static/img/icons8_male_user.svg\" alt=\"User Icon\"><h3 class=\"text-white text-center pt-2\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

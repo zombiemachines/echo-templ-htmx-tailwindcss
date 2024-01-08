@@ -1,23 +1,21 @@
 package views
 
 templ Hello(name string) {
-	<html>
+	<html lang="en">
 		<head>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<title>Welcome</title>
-			<script src="static/js/htmx-1.9.10.min.js"></script>
-			<link href="static/css/output.css" rel="stylesheet"/>
-			// <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"/>
-			// <script src="static/js/cdn.tailwindcss.com-3.4.0.js"></script>
-			// <script> tailwind.config = {}</script>
+			<title>Welcome { name }</title>
+			<link href="/static/css/output.css" rel="stylesheet"/>
+			<script src="/static/js/htmx-1.9.10.min.js"></script>
+			<script src="https://cdn.tailwindcss.com"></script>
 		</head>
 		<body class="bg-gray-800">
 			<section class="form3 h-screen bg-cover bg-center flex items-center justify-center">
 				<div class="container mx-2">
 					<div class="lg:flex">
 						<div class="lg:w-7/12  shrink mx-2 my-2 lg:pl-8 ">
-							<img class="w-full h-full object-cover rounded-md" src="static/img/features6.jpg"/>
+							<img class="w-full h-full object-cover rounded-md" src="/static/img/features6.jpg" alt="picture of a gecko"/>
 						</div>
 						<div class="lg:w-5/6 lg:pl-8 max-w-md flex-1">
 							@FormHello()
